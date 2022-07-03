@@ -508,7 +508,7 @@ pub fn gui(
         }
 
         {
-            let prev_val = generator.engine.rpm;
+            let prev_val = 5000.0;//generator.engine.rpm;
             if let Some(value) = widget::Slider::new(prev_val, 300.0, 13000.0)
                 .label(format!("Engine RPM {:.2} ({:.1} hz)", prev_val, prev_val / 60.0).as_str())
                 .label_font_size(LABEL_FONT_SIZE)
@@ -517,7 +517,7 @@ pub fn gui(
                 .down(DOWN_SPACE)
                 .set(ids.engine_rpm_slider, ui)
             {
-                generator.engine.rpm = value;
+                generator.engine.rpm = 5000.0;//value;
             }
         }
 
